@@ -1,10 +1,9 @@
 import React from "react"
-import NavBar from "../components/NavBar"
-import User from "./User"
+import UserCard from "../components/UserCard"
   
   
-export function ListUsers(){
-    const [userData, setUserData] = React.useState([{}])
+function ListUsers() {
+    const [userData, setUserData] = React.useState([])
 
     React.useEffect(() => {
         fetch("http://127.0.0.1:8000/users")
@@ -13,7 +12,7 @@ export function ListUsers(){
     }, [])
 
     const display = userData.map(data => 
-        <User 
+        <UserCard 
             key={data.id}
             firstName={data.first_name}
             lastName={data.last_name}
@@ -24,7 +23,11 @@ export function ListUsers(){
     )
 
     return (
-        {display}
+        <div>
+            {display}
+        </div>
     )
 
 }
+
+export default ListUsers;

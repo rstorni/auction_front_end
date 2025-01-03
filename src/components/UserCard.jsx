@@ -1,6 +1,6 @@
-export default function User(props) {
+function UserCard(props) {
     return (
-        <div className="user-display">
+        <div className="userCard">
             <h1>{props.firstName} {props.lastName}</h1>
             <span>Username: {props.username}</span>
             <span>Email: {props.email}</span>
@@ -8,3 +8,6 @@ export default function User(props) {
         </div>
     )
 }
+
+export default UserCard
+

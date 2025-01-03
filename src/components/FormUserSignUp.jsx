@@ -13,7 +13,6 @@ export default function UserSignUpForm() {
                 required
             />
 
-
             <label htmlFor="email">Email:</label>
             <input 
                 id="email"

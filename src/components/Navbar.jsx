@@ -1,11 +1,26 @@
-
-export default function Navbar() {
+function Navbar() {
     return (
-        <nav className="navbar">
-            <img src="src/assets/S_logo.svg" alt="Storni's Logo" className="navbar-logo" />
-            <h1 className="navbar-title">
-                <a href="http://localhost:5174">Storni's</a>
-            </h1>
+        <nav className="defaultNav">
+            <h1>Storni's</h1>
+            <ul>
+                <li>
+                    <a href="">Profile</a>
+                </li>
+                <li>
+                    <a href="">Register</a>
+                </li>
+                <li>
+                    <a href="">Sign In</a>
+                </li>
+                <li>
+                    <a href="">Auctions</a>
+                </li>
+                <li>
+                    <a href="">About Us</a>
+                </li>
+            </ul>
         </nav>
     )
 }
+
+export default Navbar
