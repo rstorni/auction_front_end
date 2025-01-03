@@ -1,22 +1,27 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
 function Navbar() {
     return (
         <nav className="defaultNav">
-            <h1>Storni's</h1>
+            <h1>
+                <Link to="/">Storni's</Link>
+            </h1>
             <ul>
                 <li>
-                    <a href="">Profile</a>
+                    <Link to="/Profile">Profile</Link>
                 </li>
                 <li>
-                    <a href="">Register</a>
+                    <Link to="/Register">Register</Link>
                 </li>
                 <li>
-                    <a href="">Sign In</a>
+                    <Link to="/SignIn">Sign In</Link>
                 </li>
                 <li>
-                    <a href="">Auctions</a>
+                    <Link to="/Auctions">Auctions</Link>
                 </li>
                 <li>
-                    <a href="">About Us</a>
+                    <Link to="/AboutUs">About Us</Link>
                 </li>
             </ul>
         </nav>

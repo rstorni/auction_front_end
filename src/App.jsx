@@ -1,12 +1,26 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/home";
+import Profile from "./pages/Profile";
+import Auctions from "./pages/Auctions";
+import AboutUs from "./pages/AboutUs";
+import Register from "./pages/Register";
+import SignIn from "./pages/SignIn";
+import AuctionLots from "./pages/AuctionLots";
 
 function App (){
   return (
-    <>
-      <Home />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Profile" element={<Profile />} />
+        <Route path="/Auctions" element={<Auctions />} />
+        <Route path="/AboutUs" element={<AboutUs />} />
+        <Route path="/Register" element={<Register />} />
+        <Route path="/SignIn" element={<SignIn />} />
+        <Route path="/Auction/:auctionId" element={<AuctionLots />} />
+      </Routes> 
+    </Router>
   )
 }
 

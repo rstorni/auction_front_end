@@ -1,12 +1,12 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import Auctions from "./auctions";
+import ListThreeAuctions from "../components/ListAuctions_home";
 
 function Home() {
     return (
         <>
             <Navbar />
-            <Auctions />
+            <ListThreeAuctions />
             <div className="homeContent">
                 <h3 className="homeTitle">Where Art Meets Innovation and Nautical Elegance</h3>
                 <p className="homeDescription">

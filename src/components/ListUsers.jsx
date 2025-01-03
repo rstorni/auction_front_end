@@ -1,14 +1,22 @@
 import React from "react"
-import UserCard from "../components/UserCard"
+import UserCard from "./UserCard"
+import api from "../api"
   
   
 function ListUsers() {
     const [userData, setUserData] = React.useState([])
 
+    const fetchUsers = (async () => {
+        const response = await api.get('/users')
+        try{
+            setUserData(response.data)
+        } catch (error) {
+            console.log("there was an error getting users", error)
+        }
+    })
+
     React.useEffect(() => {
-        fetch("http://127.0.0.1:8000/users")
-        .then(res => res.json())
-        .then(data => setUserData(data))
+        fetchUsers() 
     }, [])
 
     const display = userData.map(data => 

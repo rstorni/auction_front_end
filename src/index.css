@@ -94,6 +94,20 @@
     }
 }
 
+/* Navlogo */
+.defaultNav a {
+    color: inherit; 
+    text-decoration: none; /* Removes underline */
+}
+
+/* Make sure the h1 element inside the navbar does not get affected by link styles */
+.defaultNav .nav-logo {
+    color: rgb(255, 255, 255); /* Choose any color you want */
+    text-decoration: none; /* Prevents underline */
+}
+
+
+
 /* home */
 
 .homeContent {
