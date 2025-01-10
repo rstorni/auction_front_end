@@ -21,6 +21,9 @@ function Navbar() {
                     <Link to="/Auctions">Auctions</Link>
                 </li>
                 <li>
+                    <Link to="/Artworks">Artworks</Link>
+                </li>
+                <li>
                     <Link to="/AboutUs">About Us</Link>
                 </li>
             </ul>

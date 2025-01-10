@@ -7,18 +7,20 @@ import AboutUs from "./pages/AboutUs";
 import Register from "./pages/Register";
 import SignIn from "./pages/SignIn";
 import AuctionLots from "./pages/AuctionLots";
+import Artworks from "./pages/Artworks";
 
 function App (){
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Profile" element={<Profile />} />
-        <Route path="/Auctions" element={<Auctions />} />
-        <Route path="/AboutUs" element={<AboutUs />} />
-        <Route path="/Register" element={<Register />} />
-        <Route path="/SignIn" element={<SignIn />} />
-        <Route path="/Auction/:auctionId" element={<AuctionLots />} />
+        <Route path="Profile" element={<Profile />} />
+        <Route path="Auctions" element={<Auctions />} />
+        <Route path="AboutUs" element={<AboutUs />} />
+        <Route path="Register" element={<Register />} />
+        <Route path="SignIn" element={<SignIn />} />
+        <Route path="Auction/:auctionId" element={<AuctionLots />} />
+        <Route path="Artworks" element={<Artworks />} />
       </Routes> 
     </Router>
   )

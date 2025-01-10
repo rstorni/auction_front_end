@@ -1,7 +1,12 @@
-
+import Navbar from "../components/Navbar"
 
 function AuctionLots() {
-    return <h1>lots</h1>
+    return(
+        <>
+            <Navbar />
+            <h1>lots</h1>
+        </>
+    )
 }
 
 export default AuctionLots

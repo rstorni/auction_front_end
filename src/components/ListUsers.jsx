@@ -3,7 +3,7 @@ import UserCard from "./UserCard"
 import api from "../api"
   
   
-function ListUsers() {
+function ListUsers({ refreshTrigger }) {
     const [userData, setUserData] = React.useState([])
 
     const fetchUsers = (async () => {
@@ -17,7 +17,7 @@ function ListUsers() {
 
     React.useEffect(() => {
         fetchUsers() 
-    }, [])
+    }, [refreshTrigger])
 
     const display = userData.map(data => 
         <UserCard 

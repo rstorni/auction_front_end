@@ -2,7 +2,7 @@ import React from "react";
 import AuctionCard from "./AuctionCard";
 import api from "../api";
 
-function ListAuctions() {
+function ListAuctions({ refreshTrigger }) {
     const [auctions, setAuctions] = React.useState([])
 
     const fetchAuctions = (async () => {
@@ -16,11 +16,12 @@ function ListAuctions() {
 
     React.useEffect(() => {
         fetchAuctions()
-    }, [])
+    }, [refreshTrigger])
 
     const auctionList = auctions.map(auction => 
         <AuctionCard 
             key={auction.auction_id}
+            auction_id={auction.auction_id}
             name={auction.name}
             start_date={auction.start_date}
             end_date={auction.end_date}

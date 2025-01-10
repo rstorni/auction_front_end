@@ -4,7 +4,7 @@ function AuctionCard(props) {
     return (
         <div className="auctionCard">
             <h1>
-                <Link>{props.name}</Link>
+                <Link to={`/Auction/${props.auction_id}`}>{props.name}</Link>
             </h1>
             <span>Dates: {props.start_date} - {props.end_date}</span>
             <p>Details: {props.details}</p>

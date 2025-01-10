@@ -2,39 +2,33 @@
 import React from "react"
 import api from "../api"
 
-function UserSignUpForm() {
-    const [user, setUser] = React.useState({})
+function UserSignUpForm({ onSignup }) {
 
-    function handleSubmit(event) {
-        event.preventDefault()
-        const formEl = event.currentTarget
-        const formData = new FormData(formEl)
-
-        const email = formData.get("email")
-        const username = formData.get("username")
-        const firstname = formData.get("firstName")
-        const lastname = formData.get("lastName")
-        const password = formData.get("password")
-        
-
+    async function createUserAPI(formData) {
         try{
-            const response = api.post("/create_user", 
+            const response = await api.post("/create_user", 
                 { 
-                    username: username,
-                    password: password,
-                    first_name: firstname,
-                    last_name: lastname,
-                    email: email,
+                    username: formData.get("username"),
+                    password: formData.get("password"),
+                    first_name: formData.get("firstName"),
+                    last_name: formData.get("lastName"),
+                    email: formData.get("email"),
                     is_active: true
                 }
             )
-            console.log('user added')
-            setUser(response)
+            if (onSignup) {
+                onSignup()
+            }
         } catch (error) {
             console.error("Error posting user", error);
         }
-    
+    }
 
+    async function handleSubmit(event) {
+        event.preventDefault()
+        const formEl = event.currentTarget
+        const formData = new FormData(formEl)
+        createUserAPI(formData)
         formEl.reset()
     }
 
