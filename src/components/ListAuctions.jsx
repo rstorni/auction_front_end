@@ -2,12 +2,14 @@ import React from "react";
 import AuctionCard from "./AuctionCard";
 import api from "../api";
 
-function ListAuctions({ refreshTrigger }) {
+function ListAuctions({ refreshTrigger, numItems }) {
     const [auctions, setAuctions] = React.useState([])
 
     const fetchAuctions = (async () => {
         try{
-            const response = await api.get("/auctions")
+            const response = await api.get("/auctions", {
+                params: {num_items: numItems}
+            })
             setAuctions(response.data)
         } catch (error) {
             console.error("Error fetching auctions", error);
