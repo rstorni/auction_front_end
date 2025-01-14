@@ -1,6 +1,10 @@
+import "../css/card.css"
+import "../css/artwork-card.css"
+
+
 function ArtworkCard(props){
     return (
-        <div>
+        <div className="card artwork-card">
             <h1>Title: {props.title}</h1>
             <span>Artist: {props.artist}</span>
             <span>Medium: {props.medium}</span>

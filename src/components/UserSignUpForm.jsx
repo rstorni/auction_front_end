@@ -1,4 +1,4 @@
-
+import "../css/form-containter.css"
 import React from "react"
 import api from "../api"
 
@@ -34,7 +34,7 @@ function UserSignUpForm({ onSignup }) {
 
     return (
 
-        <form onSubmit={handleSubmit} method="post" className="signup-form">
+        <form onSubmit={handleSubmit} method="post" className="form-container">
             <h1>Register:</h1>
             <label htmlFor="username">Username:</label>
             <input

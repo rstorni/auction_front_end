@@ -1,0 +1,54 @@
+/* card.css */
+
+/* Shared card styles for all cards */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    margin-right : 10rem;
+    margin-top : 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: left;
+    width: 100%;
+    max-width: 250px; /* Fixed width for all cards */
+    height: 200px; /* Fixed height for all cards */
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Title and text styles */
+  .card h1,
+  .card h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: #2c3e50;
+  }
+  
+  .card span {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #7f8c8d;
+  }
+  
+  .card span:last-of-type {
+    font-weight: bold;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .card {
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+  
+    .card h1,
+    .card h2 {
+      font-size: 1rem;
+    }
+  }

@@ -1,3 +1,5 @@
+import "../css/form-containter.css"
+
 import React from "react"
 import api from "../api"
 
@@ -33,7 +35,7 @@ function AuctionCreateForm({ onAuctionCreated }){
     }
 
     return (
-        <form onSubmit={handleSubmit} method="post">
+        <form onSubmit={handleSubmit} method="post" className="form-container">
             <h1>Add an auction</h1>
             <label htmlFor="auctionName">Auction Name:</label>
             <input 

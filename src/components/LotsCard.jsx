@@ -19,10 +19,11 @@ function LotsCard(props) {
     }, [])
 
     return (
-        <>
-            <h1>{artwork.title}</h1>
-            <span>{props.low_estimate_price} - {props.high_estimate_price}</span>
-        </>
+        <div className="card lot-card">
+            <h1>Title: {artwork.title}</h1>
+            <h2>auction ID: {props.auction_id}</h2>
+            <span>Low Estimate: {props.low_estimate_price} - High Estimate{props.high_estimate_price}</span>
+        </div>
     )
 }
 

@@ -1,6 +1,8 @@
+import "../css/form-containter.css"
+
 function UserSignInForm() {
     return (
-        <form>
+        <form className="form-container">
             <label htmlFor="signInEmail">Email</label>
             <input name="signInEmail" type="email"></input>
 

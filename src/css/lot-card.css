@@ -1,0 +1,5 @@
+/* lots-card.css */
+  
+  .lots-card span:last-of-type {
+    color: #e67e22; /* Orange for price estimates */
+  }

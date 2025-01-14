@@ -1,0 +1,31 @@
+/* listContainer styling */
+.listContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row by default */
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 20 auto;
+}
+
+/* Adjust layout for medium screens (2 items per row) */
+@media (max-width: 1024px) {
+    .listContainer {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+    }
+}
+
+/* Adjust layout for small screens (1 item per row) */
+@media (max-width: 768px) {
+    .listContainer {
+        grid-template-columns: 1fr; /* 1 item per row */
+    }
+}
+
+/* Styling for paragraphs inside the list container */
+.listContainer p {
+    font-size: 1.25rem;
+    color: #7f8c8d;
+    text-align: center;
+    margin-top: 2rem;
+}

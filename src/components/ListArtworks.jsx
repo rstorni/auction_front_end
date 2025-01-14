@@ -1,3 +1,5 @@
+import "../css/list.css"
+
 import React from "react";
 import ArtworkCard from "./ArtworkCard";
 import api from "../api";
@@ -30,7 +32,7 @@ function ListArtworks({ triggerRefresh }) {
     )
 
     return (
-        <div>
+        <div className="listContainer">
             {artworkList}
         </div>
     )

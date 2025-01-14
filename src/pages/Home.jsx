@@ -1,12 +1,12 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import ListAuctions from "../components/ListAuctions";
+import "../css/home.css";
 
 function Home() {
     return (
         <>
             <Navbar />
-            <ListAuctions numItems={3}/>
             <div className="homeContent">
                 <h3 className="homeTitle">Where Art Meets Innovation and Nautical Elegance</h3>
                 <p className="homeDescription">
@@ -21,6 +21,7 @@ function Home() {
                     Start your journey today and let Storni’s be your gateway to inspiration.
                 </p>
             </div>
+            <ListAuctions numItems={3}/>
         </>
     )
 }

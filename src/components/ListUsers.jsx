@@ -1,3 +1,5 @@
+import "../css/list.css"
+
 import React from "react"
 import UserCard from "./UserCard"
 import api from "../api"
@@ -31,7 +33,7 @@ function ListUsers({ refreshTrigger }) {
     )
 
     return (
-        <div>
+        <div className="listContainer">
             {display}
         </div>
     )

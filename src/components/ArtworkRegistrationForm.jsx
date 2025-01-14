@@ -1,3 +1,5 @@
+import "../css/form-containter.css"
+
 import React from "react";
 import api from "../api";
 
@@ -34,7 +36,7 @@ function ArtworkRegistrationForm({ onArtworkCreated }) {
 
     return (
 
-        <form onSubmit={handleSubmit} method="post">
+        <form onSubmit={handleSubmit} method="post" className="form-container">
 
             <label htmlFor="title">Title</label>
             <input 

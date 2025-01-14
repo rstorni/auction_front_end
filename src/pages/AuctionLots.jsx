@@ -4,6 +4,8 @@ import api from "../api";
 import { useParams } from "react-router-dom";
 import LotsCard from "../components/LotsCard";
 import LotCreateForm from "../components/LotCreateForm";
+import ListLots from "../components/ListLots";
+import '../css/auction-lots.css'; // Import the CSS for styling
 
 function AuctionLots() {
     const [auction, setAuction] = React.useState({})
@@ -23,20 +25,19 @@ function AuctionLots() {
     }, [])
 
     return(
-        <>
+        <div className="auctionPageContainer">
             <Navbar />
-            <h1>{auction.name}</h1>
-            <span>{auction.start_date} - {auction.start_date}</span>
-            <span>{auction.details}</span>
-            <p>Auction ID: {auctionId}</p>
-            <LotCreateForm />
-            <h2>lots:</h2>
-            <LotsCard 
-                artwork_id={'a1a8fb26-3bbc-43a8-ae54-9d7af5243225'}
-                low_estimate_price={0}
-                high_estimate_price={100}
-            />
-        </>
+            <h1 className="auctionTitle">{auction.name}</h1>
+            <div className="auctionDetails">
+                <span >Start Date: {auction.start_date} - End Date:{auction.start_date}</span>
+                <p>{auction.details}</p>
+            </div>
+            <p className="auctionId">Auction ID: {auctionId}</p>
+            <LotCreateForm auctionId={auctionId} className="lotCreateForm"/>
+            <h2 className="lotsTitle">lots:</h2>
+            <ListLots auctionID={auctionId}/>
+
+        </div>
     )
 }
 

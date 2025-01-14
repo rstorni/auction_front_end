@@ -1,0 +1,8 @@
+/* user-card.css */
+  .userCard span:last-of-type {
+    color: #27ae60; /* Green for active */
+  }
+  
+  .userCard span:last-of-type.inactive {
+    color: #e74c3c; /* Red for inactive */
+  }

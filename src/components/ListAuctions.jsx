@@ -1,3 +1,5 @@
+import "../css/list.css"
+
 import React from "react";
 import AuctionCard from "./AuctionCard";
 import api from "../api";
@@ -32,7 +34,7 @@ function ListAuctions({ refreshTrigger, numItems }) {
     )
 
     return (
-        <div className="auctionContainer">
+        <div className="listContainer">
             {auctionList}
         </div>
     )

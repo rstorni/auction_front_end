@@ -1,8 +1,11 @@
+import "../css/card.css"
+import "../css/auction-card.css"
+
 import { Link } from "react-router-dom";
 
 function AuctionCard(props) {
     return (
-        <div className="auctionCard">
+        <div className="card auction-card">
             <h1>
                 <Link 
                     to={{
