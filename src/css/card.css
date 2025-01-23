@@ -2,53 +2,82 @@
 
 /* Shared card styles for all cards */
 .card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #ffffff;
-    padding: 1.5rem;
-    margin-right : 10rem;
-    margin-top : 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    text-align: left;
-    width: 100%;
-    max-width: 250px; /* Fixed width for all cards */
-    height: 200px; /* Fixed height for all cards */
-  }
-  
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  }
-  
-  /* Title and text styles */
-  .card h1,
-  .card h2 {
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
-    color: #2c3e50;
-  }
-  
-  .card span {
-    display: block;
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-    color: #7f8c8d;
-  }
-  
-  .card span:last-of-type {
-    font-weight: bold;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  margin-right: 10rem;
+  margin-top: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: left;
+  width: 100%;
+  max-width: 250px; /* Fixed width for all cards */
+  height: 390px; /* Increased height to accommodate image */
+  display: flex;
+  flex-direction: column; /* Ensure card content stacks vertically */
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Image styling */
+.card img {
+  width: 100%;
+  height: 180px; /* Set fixed height for image */
+  object-fit: cover; /* Ensures image covers the area without distortion */
+  border-radius: 4px;
+}
+
+/* Title and text styles */
+.card h1,
+.card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #2c3e50;
+}
+
+.card span {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #7f8c8d;
+}
+
+.card span:last-of-type {
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card {
       padding: 1rem;
       font-size: 0.9rem;
-    }
-  
-    .card h1,
-    .card h2 {
-      font-size: 1rem;
-    }
+      max-width: 200px; /* Adjusted max width on smaller screens */
+      height: 300px; /* Adjusted height for smaller screens */
   }
+
+  .card img {
+      height: 150px; /* Adjusted image height for smaller screens */
+  }
+
+  .card h1,
+  .card h2 {
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+      max-width: 100%; /* Make card take full width on very small screens */
+      padding: 0.75rem;
+      height: auto; /* Allow card to adjust height automatically */
+  }
+
+  .card img {
+      height: 180px; /* Adjust image height on small screens */
+  }
+}

@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 function AuctionCard(props) {
     return (
         <div className="card auction-card">
+            <img src="https://www.whoi.edu/wp-content/uploads/2019/01/alvinhistory_21887.jpg"/>
             <h1>
                 <Link 
                     to={{

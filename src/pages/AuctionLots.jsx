@@ -5,7 +5,6 @@ import { useParams } from "react-router-dom";
 import LotsCard from "../components/LotsCard";
 import LotCreateForm from "../components/LotCreateForm";
 import ListLots from "../components/ListLots";
-import '../css/auction-lots.css'; // Import the CSS for styling
 
 function AuctionLots() {
     const [auction, setAuction] = React.useState({})
